@@ -1,4 +1,5 @@
-# Vate Motivational Quote Application
+# Vate
+-  Motivational Quote Application
 
 ## Created By
 - Ibrahim Mustapha 
