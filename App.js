@@ -7,26 +7,23 @@
  */
 
 import React from 'react'
-import {View, Text, StyleSheet, StatusBar} from 'react-native'
+import BottomNavigator from './src/components/navigation/BottomTabNavigation'
+import { NavigationContainer } from '@react-navigation/native'
+import {createNativeStackNavigator} from '@react-navigation/native-stack'
+import Authentication from './src/components/main_components/Authentication'
 
+const Stack = createNativeStackNavigator()
+
+// Navigation from one screen to the other 
 const App = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.textStyle}>Hello JavaScript!</Text>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{headerShown: false}}>
+        <Stack.Screen name="Authentication" component={Authentication} />
+        <Stack.Screen name="BottomNavigator" component={BottomNavigator} />
+      </Stack.Navigator>
+    </NavigationContainer>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  textStyle: {
-    textAlign: 'center',
-    color: 'orange',
-  }
-})
 
 export default App;
