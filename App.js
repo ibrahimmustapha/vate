@@ -11,6 +11,7 @@ import BottomNavigator from './src/components/navigation/BottomTabNavigation'
 import { NavigationContainer } from '@react-navigation/native'
 import {createNativeStackNavigator} from '@react-navigation/native-stack'
 import Authentication from './src/components/main_components/Authentication'
+import Login from './src/components/main_components/Login'
 
 const Stack = createNativeStackNavigator()
 
@@ -21,6 +22,7 @@ const App = () => {
       <Stack.Navigator screenOptions={{headerShown: false}}>
         <Stack.Screen name="Authentication" component={Authentication} />
         <Stack.Screen name="BottomNavigator" component={BottomNavigator} />
+        <Stack.Screen name="Login" component={Login} />
       </Stack.Navigator>
     </NavigationContainer>
   )
