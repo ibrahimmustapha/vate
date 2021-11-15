@@ -1,14 +1,24 @@
 import React from 'react'
 import { View, Text, StyleSheet, Image, TextInput, Pressable } from 'react-native' 
 import Colors from '../../assets/colors/Colors'
+import Icon from 'react-native-vector-icons/FontAwesome5'
 
 const Login = ({ navigation }) => {
     return (
         <View style={{backgroundColor: Colors.white}}>
-            <Image style={styles.imgStyle} source={require('../../assets/images/med3.png')} />
+            <Image style={styles.imgStyle} source={require('../../assets/images/med9.png')} />
             <View style={styles.container}>
-            <TextInput style={styles.emailStyle} placeholder="Please enter email" />
-            <TextInput style={styles.passStyle}  placeholder="Please enter password" secureTextEntry={true}/>
+            <View style={styles.emailContainer}>
+            <Icon name="user" size={15} color={Colors.grey} />
+            <Text style={{ paddingLeft: 10, color: Colors.grey}}>Email</Text>
+            </View>
+            <TextInput style={styles.emailStyle} placeholder="example@mail.com" placeholderTextColor={Colors.grey} />
+          <View style={styles.passwordContainer}>
+            <Icon name="lock" size={15} color={Colors.grey} />
+            <Text style={{ paddingLeft: 10, color: Colors.grey }}>Password</Text>
+          </View>
+            <TextInput style={styles.passStyle}  placeholder="8+ characters" placeholderTextColor={Colors.grey} secureTextEntry={true}/>
+            <Text style={styles.resetBtnStyle}>Forgot password?</Text>
             </View>
             <View style={styles.authBtnContainer}>
                 <Pressable onPress={() => navigation.navigate('BottomNavigator', {name: 'BottomNavigator'})}>
@@ -19,12 +29,12 @@ const Login = ({ navigation }) => {
                 <View style={{flexDirection: 'row', alignItems: 'center'}}>
                     <View style={{flex: 1, height: 1, backgroundColor: Colors.grey}} />
                     <View>
-                        <Text style={{width: 50, textAlign: 'center'}}>or</Text>
+                        <Text style={{width: 50, textAlign: 'center', color: Colors.grey}}>or</Text>
                         </View>
                         <View style={{flex: 1, height: 1, backgroundColor: Colors.grey}} />
                         </View>
                 <View style={styles.signinStyle}>
-                    <Text style={{textAlign: 'center', fontWeight: 'bold'}}>Sign up</Text>
+                    <Text style={{textAlign: 'center', fontWeight: 'bold', color: Colors.grey}}>Sign up</Text>
                 </View>
             </View>
         </View>
@@ -37,8 +47,7 @@ const styles = StyleSheet.create({
     },
     imgStyle: {
         width: '100%',
-        height: 350,
-        marginBottom: -20,
+        height: 280,
     },
     emailStyle: {
         borderBottomWidth: 1,
@@ -47,7 +56,7 @@ const styles = StyleSheet.create({
     passStyle: {
         borderBottomWidth: 1,
         borderColor: Colors.blue,
-        marginTop: 10,   
+        color: Colors.grey,
     },
     authBtnContainer: {
         margin: 20,
@@ -62,6 +71,21 @@ const styles = StyleSheet.create({
         borderColor: Colors.grey,
         padding: 15,
         marginTop: 15,
+        marginBottom: 15,
+    },
+    passwordContainer: {
+        flexDirection: 'row',
+        marginTop: 20,
+    },
+    emailContainer: {
+        flexDirection: 'row', 
+    },
+    resetBtnStyle: {
+        fontWeight: 'bold',
+        color: Colors.blue,
+        marginTop: 5,
+        textAlign: 'right',
+        marginBottom: -20,
     }
 })
 

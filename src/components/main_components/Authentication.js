@@ -8,18 +8,18 @@ const Authentication = ({ navigation }) => {
         <SafeAreaView>
             <View style={styles.container}>
             <StatusBar translucent={true} backgroundColor={Colors.transparent} />
-            <Image style={styles.imageStyle} source={require('../../assets/images/med6.png')} />
+            <Image style={styles.imageStyle} source={require('../../assets/images/med.jpg')} />
             <View style={styles.textContainer}>
                 <Text style={styles.title}>Welcome to Vate</Text>
-                <Text>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</Text>
+                <Text style={styles.textStyle}>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</Text>
                 <View>
                     <Pressable onPress={() => navigation.navigate('Login', {name: 'Login'})} >
                     <View style={styles.loginbtn}>
-                        <Text style={{textAlign: 'center', color: Colors.white, fontWeight: 'bold'}}>Log in</Text>
+                        <Text style={{textAlign: 'center', color: Colors.white, fontWeight: 'bold'}}>Get Started</Text>
                     </View>
                     </Pressable>
                     <View style={styles.signinbtn}>
-                        <Text style={{textAlign: 'center', color: Colors.dark, fontWeight: 'bold'}}>Sign up</Text>
+                        <Text style={{textAlign: 'center', color: Colors.grey, fontWeight: 'bold'}}>Sign up</Text>
                     </View>
                 </View>
             </View>
@@ -36,11 +36,15 @@ const styles = StyleSheet.create({
         fontSize: 22,
         fontWeight: 'bold',
         paddingBottom: 10,
+        color: Colors.grey,
+    },
+    textStyle: {
+        color: Colors.grey,
     },
     imageStyle: {
         width: '100%',
-        height: 310,
-        marginBottom: 80,
+        height: 400,
+        marginBottom: 10,
     },
     textContainer: {
         margin: 20,
