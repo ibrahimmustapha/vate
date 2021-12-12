@@ -10,14 +10,27 @@ const Home = () => {
             <View style={styles.searchInputContainer}>
             <TextInput placeholder="search here" />
             </View>
-            <View style={styles.searchButtonContainer}>
-                <Icon name="search" size={20} style={styles.searchIcon} />
-            </View>
             </View>
             <View style={styles.categoryContainer}>
-                <View style={styles.category}>
-                    <View style={styles.cat1}></View>
-                    <View style={styles.cat1}></View>
+            <View style={styles.category}>
+                    <View style={{flex: 1, backgroundColor: Colors.light, height: 105, marginRight: 10, width: '100%', elevation: 3, borderRadius: 5}}></View>
+                    <View style={{flex: 1, backgroundColor: Colors.light, height: 105, width: '100%', elevation: 3, borderRadius: 5}}></View>
+                </View>
+                <View style={styles.category1}>
+                    <View style={{flex: 2, backgroundColor: Colors.light, height: 105, marginRight: 10, width: '100%', elevation: 3, borderRadius: 5}}></View>
+                    <View style={{flex: 1.5, backgroundColor: Colors.light, height: 105, width: '100%', elevation: 3, borderRadius: 5}}></View>
+                </View>
+                <View style={styles.category1}>
+                    <View style={{flex: 1.5, backgroundColor: Colors.light, height: 105, marginRight: 10, width: '100%', elevation: 3, borderRadius: 5}}></View>
+                    <View style={{flex: 2, backgroundColor: Colors.light, height: 105, width: '100%', elevation: 3, borderRadius: 5}}></View>
+                </View>
+                <View style={styles.category1}>
+                    <View style={{flex: 2, backgroundColor: Colors.light, height: 105, marginRight: 10, width: '100%', elevation: 3, borderRadius: 5}}></View>
+                    <View style={{flex: 1.5, backgroundColor: Colors.light, height: 105, width: '100%', elevation: 3, borderRadius: 5,}}></View>
+                </View>
+                <View style={styles.category1}>
+                    <View style={{flex: 1.5, backgroundColor: Colors.light, height: 105, marginRight: 10, width: '100%', elevation: 3, borderRadius: 5}}></View>
+                    <View style={{flex: 2, backgroundColor: Colors.light, height: 105, width: '100%', elevation: 3, borderRadius: 5}}></View>
                 </View>
             </View>
         </View>
@@ -27,6 +40,7 @@ const Home = () => {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: Colors.white,
+        flex: 1,
     },
     textStyle: {
         textAlign: 'center',
@@ -40,21 +54,8 @@ const styles = StyleSheet.create({
         margin: 20,
     },
     searchContainer: {
-        flexDirection: 'row',
-        width: '73%',
-    },
-    searchButtonContainer: {
-        backgroundColor: Colors.blue,
-        padding: 10,
-        paddingLeft: 20,
-        paddingRight: 20,
-        marginTop: 20,
-        marginBottom: 20,
-    },
-    searchIcon: {
-        color: Colors.white,
-        flex: 1,
-        paddingTop: 5,
+        width: '90%',
+        marginTop: 15,
     },
     categoryContainer: {
         marginRight: 20,
@@ -62,14 +63,11 @@ const styles = StyleSheet.create({
     },
     category: {
         flexDirection: 'row',
-        gap: 10,
     },
-    cat1: {
-        backgroundColor: Colors.light,
-        width: '100%',
-        height: 50,
-        marginRight: 20,
-    }
+    category1: {
+        flexDirection: 'row',
+        marginTop: 15,
+    },
 })
 
 export default Home

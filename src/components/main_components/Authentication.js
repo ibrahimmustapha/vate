@@ -8,7 +8,7 @@ const Authentication = ({ navigation }) => {
         <SafeAreaView>
             <View style={styles.container}>
             <StatusBar translucent={true} backgroundColor={Colors.transparent} />
-            <Image style={styles.imageStyle} source={require('../../assets/images/med.jpg')} />
+            <Image style={styles.imageStyle} source={require('../../assets/images/med14.jpg')} />
             <View style={styles.textContainer}>
                 <Text style={styles.title}>Welcome to Vate</Text>
                 <Text style={styles.textStyle}>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</Text>
@@ -31,6 +31,7 @@ const Authentication = ({ navigation }) => {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: Colors.white,
+        // flex: 1,
     },
     title: {
         fontSize: 22,
@@ -43,8 +44,9 @@ const styles = StyleSheet.create({
     },
     imageStyle: {
         width: '100%',
-        height: 400,
+        height: 450,
         marginBottom: 10,
+        marginTop: 10,
     },
     textContainer: {
         margin: 20,

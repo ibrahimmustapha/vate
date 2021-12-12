@@ -6,7 +6,7 @@ import Icon from 'react-native-vector-icons/FontAwesome5'
 const Login = ({ navigation }) => {
     return (
         <View style={{backgroundColor: Colors.white}}>
-            <Image style={styles.imgStyle} source={require('../../assets/images/med9.png')} />
+            <Image style={styles.imgStyle} source={require('../../assets/images/med12.jpg')} />
             <View style={styles.container}>
             <View style={styles.emailContainer}>
             <Icon name="user" size={15} color={Colors.grey} />
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     },
     imgStyle: {
         width: '100%',
-        height: 280,
+        height: '47%',
     },
     emailStyle: {
         borderBottomWidth: 1,
